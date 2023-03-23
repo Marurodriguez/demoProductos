@@ -1,0 +1,17 @@
+<div class="container">
+    
+    <h4>Editar producto:</h4>
+    <label for="codigo" class="d-block">Codigo</label>
+    <input type="text" name="codigo" id="codigo" [(ngModel)]="productoActual.codigo">
+    <br>
+    <label for="nombre" class="d-block mt-2">Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="productoActual.nombre">
+    <br>
+    <label for="stock" class="d-block mt-2">Stock</label>
+    <input type="text" name="stock" id="stock" [(ngModel)]="productoActual.stock">
+    <br>
+    <label for="precioCIVA" class="d-block mt-2">Precio C/ IVA</label>
+    <input type="text" name="precioCIVA" id="precioCIVA" [(ngModel)]="productoActual.precioCIVA">
+    <br>
+    <button class="btn btn-primary  mt-4" (click)="guardar()">Guardar</button>
+</div>

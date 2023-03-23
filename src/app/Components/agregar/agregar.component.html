@@ -1,0 +1,18 @@
+<div class="container">
+    <form action="">
+        <h4>Nuevo producto:</h4>
+        <label for="codigo" class="d-block mt-2">Codigo</label>
+        <input type="text" name="codigo" id="codigo" [(ngModel)]="productoNuevo.codigo">
+        <br>
+        <label for="nombre" class="d-block mt-2">Nombre</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="productoNuevo.nombre">
+        <br>
+        <label for="stock"class="d-block mt-2">Stock</label>
+        <input type="text" name="stock" id="stock" [(ngModel)]="productoNuevo.stock">
+        <br>
+        <label for="precioCIVA" class="d-block mt-2">Precio C/ IVA</label>
+        <input type="text" name="precioCIVA" id="precioCIVA" [(ngModel)]="productoNuevo.precioCIVA">
+        <br>
+        <button class="btn btn-primary mt-4" (click)="agregarProducto()">Guardar</button>
+    </form>
+</div>
