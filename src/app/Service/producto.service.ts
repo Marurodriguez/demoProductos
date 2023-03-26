@@ -35,8 +35,6 @@ export class ProductoService {
     return this.http.delete(this.url+'/'+id);
   }
 }
-
-
 export interface Producto{
   id:string;
   nombre:string;

@@ -9,6 +9,7 @@ import { ProductoService } from 'src/app/Service/producto.service';
 export class ListadoComponent implements OnInit {
 
   lista:any=[];
+
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
@@ -27,12 +28,12 @@ export class ListadoComponent implements OnInit {
 
   }
 
-  eliminar(id:string)
-  {
+eliminar(id: string) {
+  if (confirm('El producto se eliminará definitivamente, ¿estás seguro?')) {
     this.productoService.deleteProducto(id).subscribe(
-      res=>{this.ngOnInit();},
-      err=>console.log(err)
-    );
+      res => {
+      this.listarProductos();
+    });
   }
-
+}
 }
